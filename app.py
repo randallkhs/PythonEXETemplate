@@ -1,14 +1,15 @@
-import subprocess
-import sys
-from pathlib import Path
+"""Application entry for PyInstaller and ``python app.py`` (Windows + macOS).
+
+Use ``run.sh`` for local development with a managed ``.venv`` on Unix.
+"""
+
+from __future__ import annotations
 
 
 def main() -> None:
-    script_path = Path(__file__).resolve().parent / "run.sh"
-    if not script_path.exists():
-        print("ERROR: run.sh was not found next to app.py")
-        sys.exit(1)
-    subprocess.run(["bash", str(script_path)], check=True)
+    from app.gui import run
+
+    run()
 
 
 if __name__ == "__main__":
