@@ -1,0 +1,12 @@
+# PyInstaller / compiler artifacts (never commit — breaks Windows checkout path limits)
+build/
+dist/
+_compiler_staging_*/
+_compiler_prep_backup_*/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env

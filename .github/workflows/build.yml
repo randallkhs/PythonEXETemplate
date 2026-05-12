@@ -11,6 +11,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      # Avoid checkout failures on paths >260 chars if stray staging trees reappear
+      - name: Enable Git long paths (Windows)
+        shell: pwsh
+        run: git config --global core.longpaths true
+
       - name: Checkout files
         uses: actions/checkout@v4
 
