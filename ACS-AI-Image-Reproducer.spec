@@ -32,6 +32,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['compiler_workspace/app_icon.icns'],
 )
 coll = COLLECT(
     exe,
@@ -45,6 +46,6 @@ coll = COLLECT(
 app = BUNDLE(
     coll,
     name='ACS-AI-Image-Reproducer.app',
-    icon=None,
+    icon='compiler_workspace/app_icon.icns',
     bundle_identifier=None,
 )
