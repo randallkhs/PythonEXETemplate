@@ -27,7 +27,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --noconfirm --clean --onedir --windowed --name ACS-AI-Image-Reproducer app.py --icon compiler_workspace/app_icon.ico
+          pyinstaller --onedir --windowed --name ACS-AI-Image-Reproducer app.py --icon compiler_workspace/app_icon.ico
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
