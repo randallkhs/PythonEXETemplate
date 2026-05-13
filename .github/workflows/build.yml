@@ -26,8 +26,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build EXE
+        shell: pwsh
         run: |
-          pyinstaller --onedir --windowed --name ACS-AI-Image-Reproducer app.py --icon compiler_workspace/app_icon.ico
+          Remove-Item -Recurse -Force dist, build -ErrorAction SilentlyContinue
+          Remove-Item -Force *.spec -ErrorAction SilentlyContinue
+          pyinstaller --noconfirm --clean --onedir --windowed --name ACS-AI-Image-Reproducer app.py --icon compiler_workspace/app_icon.ico
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
