@@ -1,16 +1,7 @@
-"""Application entry for PyInstaller and ``python app.py`` (Windows + macOS).
+"""Entry point for ACS-AI-Image-Reproducer."""
 
-Use ``run.sh`` for local development with a managed ``.venv`` on Unix.
-"""
-
-from __future__ import annotations
-
-
-def main() -> None:
-    from app.gui import run
-
-    run()
+from app.gui import run
 
 
 if __name__ == "__main__":
-    main()
+    run()

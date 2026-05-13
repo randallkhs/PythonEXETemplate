@@ -1,0 +1,15 @@
+# Randy Python APP Compiler — local prepare/build (do not commit)
+_compiler_staging_*/
+_compiler_prep_backup_*/
+.randy_compiler_build_venv/
+
+# PyInstaller / local builds
+build/
+dist/
+*.spec
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
