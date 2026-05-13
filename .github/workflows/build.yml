@@ -30,7 +30,7 @@ jobs:
         run: |
           Remove-Item -Recurse -Force dist, build -ErrorAction SilentlyContinue
           Remove-Item -Force *.spec -ErrorAction SilentlyContinue
-          pyinstaller --noconfirm --clean --onedir --windowed --name ACS-AI-Image-Reproducer app.py --icon compiler_workspace/app_icon.ico
+          pyinstaller --noconfirm --clean --onedir --windowed --name ACS-Images-to-Image-Converter app.py --icon compiler_workspace/app_icon.ico
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4

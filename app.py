@@ -1,7 +1,6 @@
-"""Entry point for ACS-AI-Image-Reproducer."""
+"""Entry point for ACS-Images-to-Image-Converter."""
 
-from app.gui import run
-
+from gui.app import run
 
 if __name__ == "__main__":
     run()
